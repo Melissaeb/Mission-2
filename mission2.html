@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    <section id="title-area">
+      <h2>P.S.</h2>
+      <h1>Water Your Plants.</h1>
+    </section>
+    <section class="description-left" id="left-marble-queen">
+      <h4>Marble Queen Pothos</h4>
+      <form>
+      <label for="marble-season">What season is it?</label>
+      <select name="marble-season" id="marble-season">
+        <option value="Choose">Choose a season</option>
+        <option value="Summer">Summer</option>
+        <option value="Autumn">Autumn</option>
+        <option value="Winter">Winter</option>
+        <option value="Spring">Spring</option>
+      </select>
+      <br/>
+      <label for="marble-soil-moisture">How dry is the soil?</label>
+      <select name="marble-soil-moisture" id="marble-soil-moisture">
+        <option value="Choose">Choose from list</option>
+        <option value="Wet">It's quite wet.</option>
+        <option value="Moist">It's moist.</option>
+        <option value="Dry top inches">The top two/three inches are dry.</option>
+        <option value="All dry">The soil is completely dry.</option>
+      </select>
+      <br/>
+      <label for="marble-fertiliser">When was it last fertilised?</label>
+      <select name="marble-fertiliser" id="marble-fertiliser">
+        <option value="Choose">Choose from list</option>
+        <option value=">month">More than a month ago.</option>
+        <option value="month">About a month ago.</option>
+        <option value="less-than-month">Less than a month ago.</option>
+        <option value="?">I don't know.</option>
+      </select>
+      <br/>
+      <button id="marble-submit" onclick="MarbleWaterInstructions(event)">So, what should I do?</button>
+      </form>
+      <p id="marble-water-instructions"></p>
+      <p id="marble-fertiliser-instructions"></p>
+    </section>
+    <section class="plant-right " id="right-marble-queen">
+      <image id="marble-queen" src="Images/Marble-queen-pothos-3.jpeg"></image>
+    </section>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/418ce2d2a0.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <nav>
+        <ul id="menuList">
+          <li><a href="#">Marble Queen Pothos</a></li>
+          <li><a href="#">Silver Satin Pothos</a></li>
+          <li><a href="#">Peperomia</a></li>
+          <li><a href="#">Peace Lily</a></li>
+          <li><a href="#">anthurium andraeanum</a></li>
+          <li><a href="#">Graptosedum francesco baldi</a></li>
+          <li><a href="#">Haworthia</a></li>
+          <li><a href="#">Perilla</a></li>
+        </ul>
+      </nav>
+      <img class="down-1 fa-solid fa-ellipsis-vertical fa-2xl menu-icon" onclick="togglemenu()"/>
+    </header>
+    
+    <section id="title-area">
+      <h2>P.S.</h2>
+      <h1>Water Your Plants.</h1>
+      <button id="force">Need a push?</button>
+      <i class="down-1 fa-solid fa-ellipsis-vertical fa-2xl"></i>
+      <i class="fa-solid fa-chevron-down fa-2xl"></i>
+    </section>
+
+    <section class="plant-left left-marble-queen" id="left-marble-queen">
+      <image id="marble-queen" src="Images/Marble-queen-pothos-2.png"></image>
+    </section>
+    <section class="description-right" id="right-marble-queen">
+      <h3>Marble Queen Pothos</h3>
+    </section>
+
+    <section class="description-left" id="left-silver-satin">
+      <h4>Silver Satin Pothos</h4>
+    </section>
+    <section class="plant-right" id="right-silver-satin">
+      <image id="silver-satin" src="Images/Silver-satin-pothos.png"></image>
+    </section>
+
+    <section class="plant-left" id="left-peperomia">
+      <image id="peperomia" src="Images/peperomia.png"></image>
+    </section>
+    <section class="description-right" id="right-peperomia">
+      <h3>Peperomia</h3>
+    </section>
+
+    <section class="description-left" id="left-peace-lily">
+      <h4>Peace Lily</h4>
+    </section>
+    <section class="plant-right" id="right-peace-lily">
+      <image id="peace-lily" src="Images/Peace-lily.png"></image>
+    </section>
+
+    <section class="plant-left" id="left-andraeanum">
+      <image id="andraeanum" src="Images/anthurium-andraeanum.png"></image>
+    </section>
+    <section class="description-right" id="right-andraeanum">
+      <h3>Anthurium andraeanum</h3>
+    </section>
+
+    <section class="description-left" id="left-graptosedum">
+      <h4>Graptosedum francesco baldi</h4>
+    </section>
+    <section class="plant-right" id="right-graptosedum">
+      <image id="graptosedum" src="Images/graptosedum-francesco-baldi.png"></image>
+    </section>
+
+    <section class="plant-left" id="left-haworthia">
+      <image id="haworthia" src="Images/haworthia-windowsill.jpeg"></image>
+    </section>
+    <section class="description-right" id="right-haworthia">
+      <h3>Haworthia</h3>
+    </section>
+
+    <section class="description-left" id="left-perilla">
+      <h4>Perilla</h4>
+    </section>
+    <section class="plant-right" id="right-perilla">
+      <image id="perilla" src="Images/Perilla-frutescens.png"></image>
+    </section>
+  </body>
+</html> -->
