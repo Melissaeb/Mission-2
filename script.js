@@ -4,13 +4,13 @@ const marbleSeason = document.getElementById("marble-season");
 const marbleSoilMoisture = document.getElementById("marble-soil-moisture");
 const marbleFertiliser = document.getElementById("marble-fertiliser");
 const marbleButton = document.getElementById("marble-submit");
-const marbleWaterInstructions = document.getElementById(
-  "marble-water-instructions"
-);
+const marbleWaterInstructions = document.getElementById("marble-water-instructions");
 
+// ====== Inputs and instructions ====== //
 function MarbleWaterInstructions(event) {
   event.preventDefault();
-
+  
+  // ====== Watering ====== //
   if (marbleSoilMoisture.value === "All dry") {
     marbleWaterInstructions.innerHTML =
       "It's time to water your pothos. Pour water into the soil until it comes out of the drainage holes, or reverse water it by putting the pot in some water and let it soak for 10 minutes to an hour.";
@@ -31,6 +31,7 @@ function MarbleWaterInstructions(event) {
       "Your pothos doesn't need watering at the moment.";
   }
 
+  // ====== Fertiliser ====== //
   if (
     (marbleSeason.value === "Summer" || marbleSeason.value === "Spring") &&
     (marbleFertiliser.value === ">month" ||
@@ -45,7 +46,7 @@ function MarbleWaterInstructions(event) {
     marbleFertiliser.value === "Choose"
   ) {
     marbleWaterInstructions.innerHTML +=
-      "<br><br>Please enter when your pothos was last fertilised.";
+      "<br><br>Please enter when your was last fertilised.";
   } else if (
     marbleFertiliser.value === "?" &&
     (marbleSeason.value === "Summer" || marbleSeason.value === "Spring")
